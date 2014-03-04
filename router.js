@@ -1,4 +1,5 @@
 var views = require ("./views");
+var upload = require ("./upload");
 
 function route(pathname,request,response) {
   console.log("About to route a request for " + pathname);
@@ -8,8 +9,7 @@ function route(pathname,request,response) {
       views.homepage(response);
       break;
     case '/upload' :
-      response.write("upload...");
-      response.end();
+      upload.upload(request,response);
       break;
   }
 }
