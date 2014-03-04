@@ -1,6 +1,6 @@
 var views = require ("./views");
 
-function route(pathname,response) {
+function route(pathname,request,response) {
   console.log("About to route a request for " + pathname);
   switch(pathname) {
     case '/' :
